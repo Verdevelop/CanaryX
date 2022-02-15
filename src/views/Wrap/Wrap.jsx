@@ -208,7 +208,7 @@ function Wrap() {
               </div>
             </Grid>
 
-            <div className="staking-area">
+            {/* <div className="staking-area">
               {!address ? (
                 <div className="stake-wallet-notification">
                   <div className="wallet-menu" id="wallet-menu">
@@ -341,7 +341,7 @@ function Wrap() {
                   </div>
                 </>
               )}
-            </div>
+            </div> */}
           </Grid>
         </Paper>
       </Zoom>
