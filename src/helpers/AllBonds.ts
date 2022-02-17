@@ -3,6 +3,7 @@ import { addresses, DEFAULT_NETWORK } from "src/constants";
 
 import { ReactComponent as CandImg } from "src/assets/tokens/CAND.svg";
 import { ReactComponent as CnyaCandimg } from "src/assets/tokens/CNYA-CAND.svg";
+import { ReactComponent as Cnyximg } from "src/assets/tokens/CNYX.svg";
 import { ReactComponent as PdznTombImg } from "src/assets/tokens/PDZN-TOMB.svg";
 import { ReactComponent as UsdcImg } from "src/assets/tokens/USDC.svg";
 import { ReactComponent as MimImg } from "src/assets/tokens/MIM.svg";
@@ -343,6 +344,24 @@ export const cnya_cand = new LPBond({
     "https://xfx.flr.finance/swap?inputCurrency=0x612C0FAd248FF002E1cD0d5E09838b6F78CC15B8&outputCurrency=0x70Ad7172EF0b131A1428D0c1F66457EB041f2176",
 });
 
+export const cnyx = new StableBond({
+  name: "cnyx",
+  displayName: "CNYX",
+  bondToken: "CNYX",
+  bondIconSvg: Cnyximg,
+  bondContractABI: DaiBondContract,
+  networkAddrs: {
+    [NetworkID.Mainnet]: {
+      bondAddress: "0x3e6F88F88327fcd4Ddeb5C63a469A4aB5E219b33",
+      reserveAddress: "0x8d32E20d119d936998575B4AAff66B9999011D27",
+    },
+    [NetworkID.Testnet]: {
+      bondAddress: "",
+      reserveAddress: "",
+    },
+  },
+});
+
 // export const hec_dai_v2 = new LPBond({
 //   name: "hec_dai_lp",
 //   displayName: "HEC-DAI LP",
@@ -532,6 +551,7 @@ export const cnya_cand = new LPBond({
 export const allBonds = [
   cnya_cand,
   cand,
+  cnyx,
 ];
 export const allBondsMap = allBonds.reduce((prevVal, bond) => {
   return { ...prevVal, [bond.name]: bond };

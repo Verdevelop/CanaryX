@@ -55,7 +55,7 @@ function NavContent() {
               <SvgIcon
                 color="primary"
                 component={CNYAIcon}
-                viewBox="0 0 145 160"
+                viewBox="0 0 160 160"
                 style={{ minWdth: "180px", minHeight: "200px", width: "200px" }}
               />
               <div className="wallet-link f-32">Canary Alpha</div>
